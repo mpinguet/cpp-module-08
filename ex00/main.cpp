@@ -2,7 +2,7 @@
 
 int main()
 {
-	std::vector<int> v;
+	std::list<int> v;
 	v.push_back(10);
 	v.push_back(20);
 	v.push_back(30);
@@ -11,7 +11,7 @@ int main()
 
 	try
 	{
-		easyfind(v, 11);
+		easyfind(v, 10);
 	}
 	catch(std::exception &e)
 	{
