@@ -17,8 +17,9 @@ public:
     Span &operator=(const Span&);
 
     void addNumber(int i);
-    const int longestSpan();
-    const int shortestSpan();
+	void addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end);
+    int longestSpan() const;
+    int shortestSpan() const;
 
     class SpanFullException : public std::exception
     {
@@ -28,5 +29,4 @@ public:
     {
         virtual const char *what() const throw();
     };
-    
 };

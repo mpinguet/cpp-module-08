@@ -15,7 +15,6 @@ void	test_subject() {
 	mstack.push(3);
 	mstack.push(5);
 	mstack.push(737);
-	//[...]
 	mstack.push(0);
 
 	MutantStack<int>::iterator it = mstack.begin();

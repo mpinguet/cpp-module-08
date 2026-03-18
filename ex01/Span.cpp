@@ -24,10 +24,19 @@ void Span::addNumber(int i)
         throw SpanFullException();
 }
 
-const int Span::longestSpan()
+void Span::addRange(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
-    std::vector<int>::iterator max_it;
-    std::vector<int>::iterator min_it;
+	for (size_t i = 0; begin != end; i++)
+	{
+		addNumber(*begin);
+		++begin;
+	}
+}
+
+int Span::longestSpan() const
+{
+    std::vector<int>::const_iterator max_it;
+    std::vector<int>::const_iterator min_it;
 
     if (this->tab.size() <= 1)
         throw NotEnoughNumbersException();
@@ -39,7 +48,7 @@ const int Span::longestSpan()
     return max;
 }
 
-const int Span::shortestSpan()
+int Span::shortestSpan() const
 {
     int min;
 
